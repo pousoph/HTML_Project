@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramen Paradise - Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222121;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #8b0004;
+            padding: 20px;
+            color: white;
+        }
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 10px 0;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        #menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .menu-item {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .menu-item h3 {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .menu-item p {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .menu-item .price {
+            font-style: italic;
+            font-weight: bold;
+            color: #8a0004;
+        }
+        h2{
+            color: white;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+        }
+        form label {
+            margin: 5px 0 5px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #8a0004;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #8a0004;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="imgs/ramen-logo.png" alt="Ramen Paradise Logo">
+    <h1>Ramen Paradise</h1>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#order-form">Place Your Order!</a>
+    </nav>
+</header>
+
+<main>
+    <section id="menu">
+        <div class="menu-item">
+            <img src="imgs/shoyu.png" alt="Shoyu Ramen">
+            <h3>Shoyu</h3>
+            <p class="price"><i>$35.900 (COP)</i></p>
+            <p><i>Chicken consommé, chashu sauce, egg, mizuna lettuce, long onion, fresh hearts of palm and sesame oil.</i></p>
+        </div>
+        <div class="menu-item">
+            <img src="imgs/wonton.png" alt="Wonton Ramen">
+            <h3>Wonton</h3>
+            <p class="price"><i>$33.900 (COP)</i></p>
+            <p><i>Noodles prepared without eggs, tofu wontons, shi take, scallion, sesame oil and vegetable consommé.</i> </p>
+        </div>
+        <div class="menu-item">
+            <img src="imgs/tantan.png" alt="Tan Tan Ramen">
+            <h3>Tan Tan</h3>
+            <p class="price"><i>$38.900 (COP)</i></p>
+            <p><i>Noodles prepared without eggs, chopped chicken breast, wok sautéed
+                wok sautéed with shitake, zucchini and chicken broth
+                with tahini, szechuan pepper, sesame, chili oil, garlic, onion, bok choy and chashu sauce,</i> </p>
+        </div>
+    </section>
+
+    <section id="order-form">
+        <h2 style="text-align: center;">Place Your Order</h2>
+        <form>
+            <label for="shoyu-qty">Shoyu(Qty):</label>
+            <input type="number" id="shoyu-qty" name="shoyu" min="0" value="0">
+
+            <label for="miso-qty">Wonton (Qty):</label>
+            <input type="number" id="miso-qty" name="miso" min="0" value="0">
+
+            <label for="tan-tan-qty">TanTan (Qty):</label>
+            <input type="number" id="tan-tan-qty" name="tan-tan" min="0" value="0">
+
+            <fieldset>
+                <legend>Add-Ons and Sides</legend>
+
+                <div>
+                    <input type="checkbox" id="egg" name="add-ons" value="Egg in ramen">
+                    <label for="egg">Egg in ramen ($2.400 COP)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="avocado" name="add-ons" value="Avocado">
+                    <label for="avocado">Avocado ($2.900 COP)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="tofu" name="add-ons" value="Tofu">
+                    <label for="tofu">Tofu ($7.400 COP)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="chicken-thigh" name="add-ons" value="Chicken thigh">
+                    <label for="chicken-thigh">Chicken thigh in ramen ($15.900 COP)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="chashu" name="add-ons" value="Chashu">
+                    <label for="chashu">Chashu (pork rib) in ramen ($17.900 COP)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="honey" name="add-ons" value="Honey">
+                    <label for="honey">Honey ($1.700 COP)</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="ice-cream" name="add-ons" value="Ice cream">
+                    <label for="ice-cream">Ice cream (Vanilla, lemon grass, chocolate) ($5.900 COP)</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="coca-cola" name="drink" value="Coca-Cola">
+                    <label for="coca-cola">Coca-Cola</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="lemonade" name="drink" value="Lemonade">
+                    <label for="lemonade">Lemonade</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="ice-tea" name="drink" value="Ice Tea">
+                    <label for="ice-tea">Ice Tea</label>
+                </div>
+
+            </fieldset>
+
+            <label for="special-requests">Special Requests:</label>
+            <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+            <input type="submit" value="Go To Checkout">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Made with love by sophgomitas</p>
+</footer>
+</body>
+</html>
